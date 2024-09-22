@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		225AFD842CA008BD00CFF03B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225AFD832CA008BD00CFF03B /* Cocoa.framework */; };
-		225AFD862CA008BD00CFF03B /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225AFD852CA008BD00CFF03B /* XcodeKit.framework */; };
 		225AFD902CA008BD00CFF03B /* SourceEditorExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 225AFD812CA008BD00CFF03B /* SourceEditorExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		225AFD962CA0092400CFF03B /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225AFD852CA008BD00CFF03B /* XcodeKit.framework */; };
+		225AFD972CA0092400CFF03B /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 225AFD852CA008BD00CFF03B /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,17 @@
 				225AFD902CA008BD00CFF03B /* SourceEditorExtension.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225AFD982CA0092400CFF03B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				225AFD972CA0092400CFF03B /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -82,7 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				225AFD842CA008BD00CFF03B /* Cocoa.framework in Frameworks */,
-				225AFD862CA008BD00CFF03B /* XcodeKit.framework in Frameworks */,
+				225AFD962CA0092400CFF03B /* XcodeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +163,7 @@
 				225AFD7D2CA008BD00CFF03B /* Sources */,
 				225AFD7E2CA008BD00CFF03B /* Frameworks */,
 				225AFD7F2CA008BD00CFF03B /* Resources */,
+				225AFD982CA0092400CFF03B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
