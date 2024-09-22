@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "225AFD6A2CA0084C00CFF03B"
-               BuildableName = "CodeWrapper.app"
-               BlueprintName = "CodeWrapper"
+               BuildableName = "Code Wrapper for Xcode.app"
+               BlueprintName = "Code Wrapper for Xcode"
                ReferencedContainer = "container:CodeWrapper.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,8 +45,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "225AFD6A2CA0084C00CFF03B"
-            BuildableName = "CodeWrapper.app"
-            BlueprintName = "CodeWrapper"
+            BuildableName = "Code Wrapper for Xcode.app"
+            BlueprintName = "Code Wrapper for Xcode"
             ReferencedContainer = "container:CodeWrapper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "225AFD6A2CA0084C00CFF03B"
-            BuildableName = "CodeWrapper.app"
-            BlueprintName = "CodeWrapper"
+            BuildableName = "Code Wrapper for Xcode.app"
+            BlueprintName = "Code Wrapper for Xcode"
             ReferencedContainer = "container:CodeWrapper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

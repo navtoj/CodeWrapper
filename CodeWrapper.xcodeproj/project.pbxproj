@@ -49,7 +49,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		225AFD6B2CA0084C00CFF03B /* CodeWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		225AFD6B2CA0084C00CFF03B /* Code Wrapper for Xcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Code Wrapper for Xcode.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		225AFD812CA008BD00CFF03B /* Code Wrapper.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Code Wrapper.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		225AFD832CA008BD00CFF03B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		225AFD852CA008BD00CFF03B /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -114,7 +114,7 @@
 		225AFD6C2CA0084C00CFF03B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				225AFD6B2CA0084C00CFF03B /* CodeWrapper.app */,
+				225AFD6B2CA0084C00CFF03B /* Code Wrapper for Xcode.app */,
 				225AFD812CA008BD00CFF03B /* Code Wrapper.appex */,
 			);
 			name = Products;
@@ -132,9 +132,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		225AFD6A2CA0084C00CFF03B /* CodeWrapper */ = {
+		225AFD6A2CA0084C00CFF03B /* Code Wrapper for Xcode */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 225AFD7A2CA0084C00CFF03B /* Build configuration list for PBXNativeTarget "CodeWrapper" */;
+			buildConfigurationList = 225AFD7A2CA0084C00CFF03B /* Build configuration list for PBXNativeTarget "Code Wrapper for Xcode" */;
 			buildPhases = (
 				225AFD672CA0084C00CFF03B /* Sources */,
 				225AFD682CA0084C00CFF03B /* Frameworks */,
@@ -149,11 +149,11 @@
 			fileSystemSynchronizedGroups = (
 				225AFD6D2CA0084C00CFF03B /* CodeWrapper */,
 			);
-			name = CodeWrapper;
+			name = "Code Wrapper for Xcode";
 			packageProductDependencies = (
 			);
 			productName = CodeWrapper;
-			productReference = 225AFD6B2CA0084C00CFF03B /* CodeWrapper.app */;
+			productReference = 225AFD6B2CA0084C00CFF03B /* Code Wrapper for Xcode.app */;
 			productType = "com.apple.product-type.application";
 		};
 		225AFD802CA008BD00CFF03B /* Code Wrapper */ = {
@@ -211,7 +211,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				225AFD6A2CA0084C00CFF03B /* CodeWrapper */,
+				225AFD6A2CA0084C00CFF03B /* Code Wrapper for Xcode */,
 				225AFD802CA008BD00CFF03B /* Code Wrapper */,
 			);
 		};
@@ -500,7 +500,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		225AFD7A2CA0084C00CFF03B /* Build configuration list for PBXNativeTarget "CodeWrapper" */ = {
+		225AFD7A2CA0084C00CFF03B /* Build configuration list for PBXNativeTarget "Code Wrapper for Xcode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				225AFD7B2CA0084C00CFF03B /* Debug */,
