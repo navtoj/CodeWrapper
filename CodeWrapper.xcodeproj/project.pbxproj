@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		225AFD842CA008BD00CFF03B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225AFD832CA008BD00CFF03B /* Cocoa.framework */; };
-		225AFD902CA008BD00CFF03B /* SourceEditorExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 225AFD812CA008BD00CFF03B /* SourceEditorExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		225AFD902CA008BD00CFF03B /* Code Wrapper.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 225AFD812CA008BD00CFF03B /* Code Wrapper.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		225AFD962CA0092400CFF03B /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225AFD852CA008BD00CFF03B /* XcodeKit.framework */; };
 		225AFD972CA0092400CFF03B /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 225AFD852CA008BD00CFF03B /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
@@ -30,7 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				225AFD902CA008BD00CFF03B /* SourceEditorExtension.appex in Embed Foundation Extensions */,
+				225AFD902CA008BD00CFF03B /* Code Wrapper.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,18 +50,18 @@
 
 /* Begin PBXFileReference section */
 		225AFD6B2CA0084C00CFF03B /* CodeWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		225AFD812CA008BD00CFF03B /* SourceEditorExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SourceEditorExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		225AFD812CA008BD00CFF03B /* Code Wrapper.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Code Wrapper.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		225AFD832CA008BD00CFF03B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		225AFD852CA008BD00CFF03B /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		225AFD912CA008BD00CFF03B /* Exceptions for "SourceEditorExtension" folder in "SourceEditorExtension" target */ = {
+		225AFD912CA008BD00CFF03B /* Exceptions for "SourceEditorExtension" folder in "Code Wrapper" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = 225AFD802CA008BD00CFF03B /* SourceEditorExtension */;
+			target = 225AFD802CA008BD00CFF03B /* Code Wrapper */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -74,7 +74,7 @@
 		225AFD872CA008BD00CFF03B /* SourceEditorExtension */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				225AFD912CA008BD00CFF03B /* Exceptions for "SourceEditorExtension" folder in "SourceEditorExtension" target */,
+				225AFD912CA008BD00CFF03B /* Exceptions for "SourceEditorExtension" folder in "Code Wrapper" target */,
 			);
 			path = SourceEditorExtension;
 			sourceTree = "<group>";
@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				225AFD6B2CA0084C00CFF03B /* CodeWrapper.app */,
-				225AFD812CA008BD00CFF03B /* SourceEditorExtension.appex */,
+				225AFD812CA008BD00CFF03B /* Code Wrapper.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,9 +156,9 @@
 			productReference = 225AFD6B2CA0084C00CFF03B /* CodeWrapper.app */;
 			productType = "com.apple.product-type.application";
 		};
-		225AFD802CA008BD00CFF03B /* SourceEditorExtension */ = {
+		225AFD802CA008BD00CFF03B /* Code Wrapper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 225AFD922CA008BD00CFF03B /* Build configuration list for PBXNativeTarget "SourceEditorExtension" */;
+			buildConfigurationList = 225AFD922CA008BD00CFF03B /* Build configuration list for PBXNativeTarget "Code Wrapper" */;
 			buildPhases = (
 				225AFD7D2CA008BD00CFF03B /* Sources */,
 				225AFD7E2CA008BD00CFF03B /* Frameworks */,
@@ -172,11 +172,11 @@
 			fileSystemSynchronizedGroups = (
 				225AFD872CA008BD00CFF03B /* SourceEditorExtension */,
 			);
-			name = SourceEditorExtension;
+			name = "Code Wrapper";
 			packageProductDependencies = (
 			);
 			productName = SourceEditorExtension;
-			productReference = 225AFD812CA008BD00CFF03B /* SourceEditorExtension.appex */;
+			productReference = 225AFD812CA008BD00CFF03B /* Code Wrapper.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
@@ -212,7 +212,7 @@
 			projectRoot = "";
 			targets = (
 				225AFD6A2CA0084C00CFF03B /* CodeWrapper */,
-				225AFD802CA008BD00CFF03B /* SourceEditorExtension */,
+				225AFD802CA008BD00CFF03B /* Code Wrapper */,
 			);
 		};
 /* End PBXProject section */
@@ -254,7 +254,7 @@
 /* Begin PBXTargetDependency section */
 		225AFD8F2CA008BD00CFF03B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 225AFD802CA008BD00CFF03B /* SourceEditorExtension */;
+			target = 225AFD802CA008BD00CFF03B /* Code Wrapper */;
 			targetProxy = 225AFD8E2CA008BD00CFF03B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -443,7 +443,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SourceEditorExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = SourceEditorExtension;
+				INFOPLIST_KEY_CFBundleDisplayName = "Code Wrapper";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -470,7 +470,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SourceEditorExtension/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = SourceEditorExtension;
+				INFOPLIST_KEY_CFBundleDisplayName = "Code Wrapper";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -507,7 +507,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		225AFD922CA008BD00CFF03B /* Build configuration list for PBXNativeTarget "SourceEditorExtension" */ = {
+		225AFD922CA008BD00CFF03B /* Build configuration list for PBXNativeTarget "Code Wrapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				225AFD932CA008BD00CFF03B /* Debug */,
