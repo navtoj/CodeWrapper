@@ -6,14 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		225AFD842CA008BD00CFF03B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225AFD832CA008BD00CFF03B /* Cocoa.framework */; };
+		225AFD862CA008BD00CFF03B /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225AFD852CA008BD00CFF03B /* XcodeKit.framework */; };
+		225AFD902CA008BD00CFF03B /* SourceEditorExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 225AFD812CA008BD00CFF03B /* SourceEditorExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		225AFD8E2CA008BD00CFF03B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 225AFD632CA0084C00CFF03B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 225AFD802CA008BD00CFF03B;
+			remoteInfo = SourceEditorExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		225AFD952CA008BD00CFF03B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				225AFD902CA008BD00CFF03B /* SourceEditorExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		225AFD6B2CA0084C00CFF03B /* CodeWrapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeWrapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		225AFD812CA008BD00CFF03B /* SourceEditorExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SourceEditorExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		225AFD832CA008BD00CFF03B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		225AFD852CA008BD00CFF03B /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		225AFD912CA008BD00CFF03B /* Exceptions for "SourceEditorExtension" folder in "SourceEditorExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 225AFD802CA008BD00CFF03B /* SourceEditorExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		225AFD6D2CA0084C00CFF03B /* CodeWrapper */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = CodeWrapper;
+			sourceTree = "<group>";
+		};
+		225AFD872CA008BD00CFF03B /* SourceEditorExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				225AFD912CA008BD00CFF03B /* Exceptions for "SourceEditorExtension" folder in "SourceEditorExtension" target */,
+			);
+			path = SourceEditorExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +77,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		225AFD7E2CA008BD00CFF03B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225AFD842CA008BD00CFF03B /* Cocoa.framework in Frameworks */,
+				225AFD862CA008BD00CFF03B /* XcodeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				225AFD6D2CA0084C00CFF03B /* CodeWrapper */,
+				225AFD872CA008BD00CFF03B /* SourceEditorExtension */,
+				225AFD822CA008BD00CFF03B /* Frameworks */,
 				225AFD6C2CA0084C00CFF03B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +103,18 @@
 			isa = PBXGroup;
 			children = (
 				225AFD6B2CA0084C00CFF03B /* CodeWrapper.app */,
+				225AFD812CA008BD00CFF03B /* SourceEditorExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		225AFD822CA008BD00CFF03B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				225AFD832CA008BD00CFF03B /* Cocoa.framework */,
+				225AFD852CA008BD00CFF03B /* XcodeKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +127,12 @@
 				225AFD672CA0084C00CFF03B /* Sources */,
 				225AFD682CA0084C00CFF03B /* Frameworks */,
 				225AFD692CA0084C00CFF03B /* Resources */,
+				225AFD952CA008BD00CFF03B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				225AFD8F2CA008BD00CFF03B /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				225AFD6D2CA0084C00CFF03B /* CodeWrapper */,
@@ -69,6 +143,28 @@
 			productName = CodeWrapper;
 			productReference = 225AFD6B2CA0084C00CFF03B /* CodeWrapper.app */;
 			productType = "com.apple.product-type.application";
+		};
+		225AFD802CA008BD00CFF03B /* SourceEditorExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 225AFD922CA008BD00CFF03B /* Build configuration list for PBXNativeTarget "SourceEditorExtension" */;
+			buildPhases = (
+				225AFD7D2CA008BD00CFF03B /* Sources */,
+				225AFD7E2CA008BD00CFF03B /* Frameworks */,
+				225AFD7F2CA008BD00CFF03B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				225AFD872CA008BD00CFF03B /* SourceEditorExtension */,
+			);
+			name = SourceEditorExtension;
+			packageProductDependencies = (
+			);
+			productName = SourceEditorExtension;
+			productReference = 225AFD812CA008BD00CFF03B /* SourceEditorExtension.appex */;
+			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +177,9 @@
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					225AFD6A2CA0084C00CFF03B = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					225AFD802CA008BD00CFF03B = {
 						CreatedOnToolsVersion = 16.0;
 					};
 				};
@@ -100,12 +199,20 @@
 			projectRoot = "";
 			targets = (
 				225AFD6A2CA0084C00CFF03B /* CodeWrapper */,
+				225AFD802CA008BD00CFF03B /* SourceEditorExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		225AFD692CA0084C00CFF03B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225AFD7F2CA008BD00CFF03B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +229,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		225AFD7D2CA008BD00CFF03B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		225AFD8F2CA008BD00CFF03B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 225AFD802CA008BD00CFF03B /* SourceEditorExtension */;
+			targetProxy = 225AFD8E2CA008BD00CFF03B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		225AFD782CA0084C00CFF03B /* Debug */ = {
@@ -297,6 +419,60 @@
 			};
 			name = Release;
 		};
+		225AFD932CA008BD00CFF03B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SourceEditorExtension/SourceEditorExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FUG9F8QSPW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SourceEditorExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SourceEditorExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.navtoj.CodeWrapper.SourceEditorExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		225AFD942CA008BD00CFF03B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SourceEditorExtension/SourceEditorExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FUG9F8QSPW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SourceEditorExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SourceEditorExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.navtoj.CodeWrapper.SourceEditorExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -314,6 +490,15 @@
 			buildConfigurations = (
 				225AFD7B2CA0084C00CFF03B /* Debug */,
 				225AFD7C2CA0084C00CFF03B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		225AFD922CA008BD00CFF03B /* Build configuration list for PBXNativeTarget "SourceEditorExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225AFD932CA008BD00CFF03B /* Debug */,
+				225AFD942CA008BD00CFF03B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
