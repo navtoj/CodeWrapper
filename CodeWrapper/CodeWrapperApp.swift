@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct CodeWrapperApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
-    }
+	var body: some Scene {
+		Window("Code Wrapper", id: "code.wrapper") {
+			ContentView()
+		}
+	}
 }
