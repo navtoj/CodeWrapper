@@ -19,6 +19,14 @@ private let debugEndIf = "#endif"
 class DebugCommand: NSObject, XCSourceEditorCommand {
 	private let domain = (Bundle.main.bundleIdentifier ?? "CodeWrapper") + "." + DebugCommand.className()
 
+	private func handleCompletion(with handler: @escaping (Error?) -> Void, message: String) -> Void {
+		handler(NSError(
+			domain: domain,
+			code: 1,
+			userInfo: [NSLocalizedDescriptionKey: message]
+		))
+	}
+
 	func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
 		let lines = invocation.buffer.lines
 		let selections = invocation.buffer.selections
@@ -27,13 +35,20 @@ class DebugCommand: NSObject, XCSourceEditorCommand {
 
 		for selection in selections {
 			if let range = selection as? XCSourceTextRange {
-				let start = range.start.line
-				let end = range.end.line
+				let startLineIndex = range.start.line
+				let endLineIndex = range.end.line
+
+				// Ensure Valid Selection
+
+				if startLineIndex >= lines.count || endLineIndex >= lines.count {
+					return handleCompletion(with: completionHandler, message: "Selection out of bounds.")
+				}
 
 				// Ensure Clean Selection
 
-				for i in start...end {
-					if let line = lines[i] as? String {
+				for i in startLineIndex...endLineIndex {
+					if i < lines.count,
+					   let line = lines[i] as? String {
 						let trimmed = line.trimmingCharacters(in: .whitespacesAndNewlines)
 
 						// Check Compilation Blocks
@@ -43,60 +58,30 @@ class DebugCommand: NSObject, XCSourceEditorCommand {
 							trimmed == debugElse ||
 							trimmed == debugEndIf
 						) {
-							completionHandler(NSError(
-								domain: domain,
-								code: 1,
-								userInfo: [NSLocalizedDescriptionKey: "Selection contains compilation block."]
-							))
-						}
-
-						// Check Block Braces
-
-						if trimmed.hasSuffix("{") || trimmed.hasSuffix("}") {
-							completionHandler(NSError(
-								domain: domain,
-								code: 1,
-								userInfo: [NSLocalizedDescriptionKey: "Selection contains block braces."]
-							))
-						}
-
-						// Check Array Braces
-
-						if trimmed.hasSuffix("[") || trimmed.hasSuffix("]") {
-							completionHandler(NSError(
-								domain: domain,
-								code: 1,
-								userInfo: [NSLocalizedDescriptionKey: "Selection contains array braces."]
-							))
-						}
-
-						// Check Tuple Braces
-
-						if trimmed.hasSuffix("(") || trimmed.hasSuffix(")") {
-							completionHandler(NSError(
-								domain: domain,
-								code: 1,
-								userInfo: [NSLocalizedDescriptionKey: "Selection contains tuple braces."]
-							))
+							return handleCompletion(with: completionHandler, message: "Selection contains compilation block.")
 						}
 					}
 				}
 
 				// Calculate Offset
 
-				let offset = linesToUpdate.count(where: { $0.text != nil }) - linesToUpdate.count(where: { $0.text == nil })
+				let linesToAdd = linesToUpdate.count(where: { $0.text != nil })
+				let linesToRemove = linesToUpdate.count(where: { $0.text == nil })
+				let offset = linesToAdd - linesToRemove
 
 				// Toggle Block
 
-				if let preStart = lines[start - 1] as? String,
-				   let postEnd = lines[end + 1] as? String,
+				if startLineIndex > 0,
+				   endLineIndex < lines.count - 1,
+				   let preStart = lines[startLineIndex - 1] as? String,
+				   let postEnd = lines[endLineIndex + 1] as? String,
 				   preStart.trimmingCharacters(in: .whitespacesAndNewlines) == debugIf,
 				   postEnd.trimmingCharacters(in: .whitespacesAndNewlines) == debugEndIf {
 
 					// Get Removal Indices
 
-					let startIndex = start - 1 + offset
-					let endIndex = end + offset
+					let startIndex = startLineIndex - 1 + offset
+					let endIndex = endLineIndex + offset
 
 					// Queue Lines to Remove
 
@@ -104,11 +89,16 @@ class DebugCommand: NSObject, XCSourceEditorCommand {
 					linesToUpdate.append((index: endIndex, text: nil))
 				} else {
 
+					// Check Empty Selection
+
+					if areStringsEmptyInRange(lines, start: startLineIndex, end: endLineIndex) {
+						return handleCompletion(with: completionHandler, message: "Selection is empty.")
+					}
+
 					// Get Insertion Indices
 
-
-					let startIndex = start + offset
-					let endIndex = end + 2 + offset
+					let startIndex = startLineIndex + offset
+					let endIndex = endLineIndex + 2 + offset
 
 					// Queue Lines to Add
 
@@ -132,4 +122,17 @@ class DebugCommand: NSObject, XCSourceEditorCommand {
 		// Pass it nil on success, and an NSError on failure.
 		completionHandler(nil)
 	}
+}
+
+// Helper Function
+
+private func areStringsEmptyInRange(_ lines: NSMutableArray, start: Int, end: Int) -> Bool {
+	for i in start...end {
+		if i < lines.count,
+		   let line = lines[i] as? String,
+		   !line.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+			return false
+		}
+	}
+	return true
 }
