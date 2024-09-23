@@ -10,7 +10,7 @@
 		225AFD842CA008BD00CFF03B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225AFD832CA008BD00CFF03B /* Cocoa.framework */; };
 		225AFD902CA008BD00CFF03B /* Code Wrapper.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 225AFD812CA008BD00CFF03B /* Code Wrapper.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		225AFD962CA0092400CFF03B /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 225AFD852CA008BD00CFF03B /* XcodeKit.framework */; };
-		225AFD972CA0092400CFF03B /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 225AFD852CA008BD00CFF03B /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		225AFD972CA0092400CFF03B /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 225AFD852CA008BD00CFF03B /* XcodeKit.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
