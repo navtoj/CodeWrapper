@@ -6,14 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		22F855272E386A5C00B60D5D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F855262E386A5C00B60D5D /* Cocoa.framework */; };
+		22F855292E386A5C00B60D5D /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22F855282E386A5C00B60D5D /* XcodeKit.framework */; };
+		22F855332E386A5C00B60D5D /* Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 22F855242E386A5C00B60D5D /* Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22F855312E386A5C00B60D5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22A2790D2E3866DF003CFE76 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22F855232E386A5C00B60D5D;
+			remoteInfo = Extension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		22F855342E386A5C00B60D5D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				22F855332E386A5C00B60D5D /* Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		22A279152E3866DF003CFE76 /* Xcodex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Xcodex.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F855242E386A5C00B60D5D /* Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Extension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F855262E386A5C00B60D5D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		22F855282E386A5C00B60D5D /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		22F855372E386A5C00B60D5D /* Exceptions for "Extension" folder in "Extension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 22F855232E386A5C00B60D5D /* Extension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		22A279172E3866DF003CFE76 /* Xcodex */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Xcodex;
+			sourceTree = "<group>";
+		};
+		22F8552A2E386A5C00B60D5D /* Extension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				22F855372E386A5C00B60D5D /* Exceptions for "Extension" folder in "Extension" target */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +77,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22F855212E386A5C00B60D5D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F855272E386A5C00B60D5D /* Cocoa.framework in Frameworks */,
+				22F855292E386A5C00B60D5D /* XcodeKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				22A279172E3866DF003CFE76 /* Xcodex */,
+				22F8552A2E386A5C00B60D5D /* Extension */,
+				22F855252E386A5C00B60D5D /* Frameworks */,
 				22A279162E3866DF003CFE76 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +103,18 @@
 			isa = PBXGroup;
 			children = (
 				22A279152E3866DF003CFE76 /* Xcodex.app */,
+				22F855242E386A5C00B60D5D /* Extension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		22F855252E386A5C00B60D5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				22F855262E386A5C00B60D5D /* Cocoa.framework */,
+				22F855282E386A5C00B60D5D /* XcodeKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +127,12 @@
 				22A279112E3866DF003CFE76 /* Sources */,
 				22A279122E3866DF003CFE76 /* Frameworks */,
 				22A279132E3866DF003CFE76 /* Resources */,
+				22F855342E386A5C00B60D5D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				22F855322E386A5C00B60D5D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				22A279172E3866DF003CFE76 /* Xcodex */,
@@ -69,6 +143,28 @@
 			productName = Xcodex;
 			productReference = 22A279152E3866DF003CFE76 /* Xcodex.app */;
 			productType = "com.apple.product-type.application";
+		};
+		22F855232E386A5C00B60D5D /* Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22F855382E386A5C00B60D5D /* Build configuration list for PBXNativeTarget "Extension" */;
+			buildPhases = (
+				22F855202E386A5C00B60D5D /* Sources */,
+				22F855212E386A5C00B60D5D /* Frameworks */,
+				22F855222E386A5C00B60D5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				22F8552A2E386A5C00B60D5D /* Extension */,
+			);
+			name = Extension;
+			packageProductDependencies = (
+			);
+			productName = Extension;
+			productReference = 22F855242E386A5C00B60D5D /* Extension.appex */;
+			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +177,9 @@
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					22A279142E3866DF003CFE76 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					22F855232E386A5C00B60D5D = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
@@ -100,12 +199,20 @@
 			projectRoot = "";
 			targets = (
 				22A279142E3866DF003CFE76 /* Xcodex */,
+				22F855232E386A5C00B60D5D /* Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		22A279132E3866DF003CFE76 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22F855222E386A5C00B60D5D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +229,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		22F855202E386A5C00B60D5D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22F855322E386A5C00B60D5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22F855232E386A5C00B60D5D /* Extension */;
+			targetProxy = 22F855312E386A5C00B60D5D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		22A279222E3866E0003CFE76 /* Debug */ = {
@@ -297,6 +419,60 @@
 			};
 			name = Release;
 		};
+		22F855352E386A5C00B60D5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FUG9F8QSPW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Extension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.navtoj.Xcodex.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		22F855362E386A5C00B60D5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Extension/Extension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FUG9F8QSPW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Extension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Extension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.navtoj.Xcodex.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -314,6 +490,15 @@
 			buildConfigurations = (
 				22A279252E3866E0003CFE76 /* Debug */,
 				22A279262E3866E0003CFE76 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22F855382E386A5C00B60D5D /* Build configuration list for PBXNativeTarget "Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22F855352E386A5C00B60D5D /* Debug */,
+				22F855362E386A5C00B60D5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
